@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<title>Unessay</title>
+<! ––curly brackets are a flask function, the url_for() generates URL for us ––>
+<! –– Handy dandy way to set this up bc later we can update things much easier ––>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename= 'style.css')}}">
+
+<body>
+    <div class="container">
+
+      <br>
+      <form class= 'box' action="" method="post" data-tilt data-tilt-max="10">
+
+          <h1>Please login</h1>
+        <input type="text" placeholder="Username" name="username" value="{{
+          request.form.username }}">
+         <input type="password" placeholder="Password" name="password" value="{{
+          request.form.password }}">
+        <input class="btn btn-default" type="submit" value="Login">
+          {% if error %}
+        <p class="error" ><strong>Error:</strong> {{ error }} </p>
+      {% endif %}
+          <script src="https://unpkg.com/vanilla-tilt@1.7.0/lib/vanilla-tilt.js"> </script>
+
+      </form>
+    </div>
+  </body>

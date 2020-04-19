@@ -1,0 +1,20 @@
+<!doctype html>
+
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename= 'styleForLoggedIn.css')}}">
+
+
+<body>
+    <div class="text">
+
+        {% if user %}  <! –– flask/python code in these brackets -->
+        <h1>You are logged in as {{ user }} </h1>
+
+        <img src= "{{url_for('static', filename= 'puppy.png')}}" width="500" height="400">
+
+        {% else %}
+        <h1>You are logged in but with no user name saved as a variable</h1>
+        {% endif %}  <! –– what the heck does this do? Signifies end of checking statements? -->
+
+    </div>
+</body>
+
