@@ -1,6 +1,8 @@
 from flask import Flask, request, render_template, redirect, url_for, flash
 # request gives us info how a user requested a source(web page)
 
+#Paul is here
+
 app = Flask(__name__) # help it determine the root path
 #app.secret_key='what ever you want'
 
